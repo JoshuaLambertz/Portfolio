@@ -56,8 +56,8 @@ nav {
     border: none;
     color: rgb(86, 85, 85);
     font-size: 12pt;
-    cursor: pointer;
     padding: 5px;
+    cursor: pointer;
 }
 
 #lang-toggle:focus {
@@ -77,9 +77,6 @@ nav {
 #github img {
     width: 35px;
     height: auto;
-}
-
-#github img {
     padding-top: 10px;
 }
 
@@ -93,7 +90,7 @@ nav {
     align-items: center;
     justify-content: center;
     max-width: 500px;
-    margin: 50px auto;
+    margin: 100px auto;
     gap: 20px;
     padding: 40px;
     border: 2px solid #ccc;
@@ -104,7 +101,6 @@ nav {
     flex-direction: column;
     gap: 20px;
     width: 300px;
-    font-size: 12pt;
     border: none;
     border-bottom: 1px solid #ccc;
 }
