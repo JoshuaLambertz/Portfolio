@@ -60,6 +60,10 @@ nav {
     padding: 5px;
 }
 
+#lang-toggle:focus {
+    outline: 0;
+}
+
 .links {
     display: flex;
     gap: 15px;

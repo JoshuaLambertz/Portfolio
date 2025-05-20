@@ -28,11 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  let currentLang = 'en';
+  let currentLang = localStorage.getItem('lang') || 'en';
+  toggleSelect.value = currentLang;
 
-  toggleSelect.addEventListener('change', () => {
-    currentLang = toggleSelect.value;
-
+  const updateLanguage = () => {
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
       el.innerText = translations[currentLang][key];
@@ -42,10 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n-placeholder');
       el.setAttribute('placeholder', translations[currentLang][key]);
     });
-  });
+  };
 
-  toggleSelect.addEventListener('change', function () {
+  updateLanguage();
+
+  toggleSelect.addEventListener('change', () => {
+    currentLang = toggleSelect.value;
+    localStorage.setItem('lang', currentLang);
+    updateLanguage();
+
     const selectedOption = toggleSelect.options[toggleSelect.selectedIndex];
     console.log('Ausgewählte Sprache:', selectedOption.value);
   });
 });
+
+document.getElementById('#submit-btn').addEventListener("click", )

@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="Portfolio.css"/>
+    <link rel="stylesheet" href="../CSS/Portfolio.css"/>
     <link rel="icon" type="image/png" href="favicon.png">
     <title>JPL - Home</title>
-    <script src="Portfolio.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="../JS/Portfolio.js"></script>
 </head>
 <body>
     <nav type="navbar">
@@ -25,10 +24,10 @@
         </div>
         <div class="nav-right">
             <a id="github" href="https://github.com/JPKawasaki/" target="_blank">
-                <img src="github.png" alt="Github Symbol"/>
+                <img src="../Icons/github.png" alt="Github Symbol"/>
             </a>
             <a id="linkedin" href="https://github.com/JPKawasaki/" target="_blank">
-                <img src="linkedin.png" alt="LinkedIn Symbol"/>
+                <img src="../Portfolio/Icons/linkedin.png" alt="LinkedIn Symbol"/>
             </a>
         </div>
     </nav>
@@ -37,12 +36,12 @@
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email-Address" data-i18n-placeholder="email-address">
             <input type="text" placeholder="Write me a massage" data-i18n-placeholder="message">
-            <input type="submit">
+            <input type="submit" id="submit-btn"">
             <div class="my-information">
                 <p id="mail">Mail</p>
                 <p id="my-email">joshuapascallambertz@gmail.com</p>
-                <p id="location" data-i18n-placeholder="location">Location</p>
-                <p id="my-location" data-i18n-placeholder="city">Düsseldorf, Germany</p>
+                <p id="location" data-i18n="location">Location</p>
+                <p id="my-location" data-i18n="city">Düsseldorf, Germany</p>
             </div>
         </section>
     </main>
