@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../CSS/Portfolio.css"/>
     <link rel="icon" type="image/png" href="favicon.png">
     <title>JPL - Home</title>
-    <script src="../JS/Portfolio.js"></script>
+    <script src="../JS/Portfolio.js" defer></script>
 </head>
 <body>
     <nav type="navbar">
@@ -33,10 +33,15 @@
     </nav>
     <main>
         <section class="massage-me">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email-Address" data-i18n-placeholder="email-address">
-            <input type="text" placeholder="Write me a massage" data-i18n-placeholder="message">
-            <input type="submit" id="submit-btn"">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email-Address" data-i18n-placeholder="email-address" required>
+                <div class="textarea-wrapper">
+                    <textarea id="message" placeholder="Write me a message" data-i18n-placeholder="message" minlength="4" maxlength="1000" required></textarea>
+                    <p id="counter">0/1000</p>
+                </div>
+                <input type="submit" id="submit-btn" value="Submit" data-i18n="submit">
+            </form>
             <div class="my-information">
                 <p id="mail">Mail</p>
                 <p id="my-email">joshuapascallambertz@gmail.com</p>

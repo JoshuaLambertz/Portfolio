@@ -98,13 +98,62 @@ nav {
     padding: 40px;
     border: 2px solid #ccc;
 }
-  
+
+.massage-me form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    font-size: 12pt;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.massage-me textarea,
 .massage-me input[type="text"],
 .massage-me input[type="email"],
 .massage-me input[type="submit"] {
-    width: 300px;
+    width: 100%;
     padding: 10px;
     font-size: 12pt;
     border: none;
     border-bottom: 1px solid #ccc;
+    resize: none;
+}
+
+.massage-me input[type="submit"] {
+    cursor: pointer;
+    margin: 20px auto;
+    color: rgb(73, 73, 73);
+}
+
+.textarea-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.textarea-wrapper textarea {
+    height: 90px;
+    width: 100%;
+    padding: 10px;
+    font-size: 12pt;
+    box-sizing: border-box;
+}
+
+.textarea-wrapper #counter {
+    position: absolute;
+    bottom: px;
+    left: 10px;
+    font-size: 8pt;
+    color: #ccc;
+    pointer-events: none;
+}
+
+.my-information {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.my-information #my-email {
+    margin-bottom: 15px;
 }

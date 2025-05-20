@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  //Sprachumschaltung
   const toggleSelect = document.getElementById('lang-toggle');
   const elements = document.querySelectorAll('[data-i18n]');
   const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: "Schreib mir eine Nachricht",
       location: "Standort",
       city: "Düsseldorf, Deutschland",
+      submit: "Senden",
     },
     en: {
       projects: "Projects",
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: "Write me a message",
       location: "Location",
       city: "Düsseldorf, Germany",
+      submit: "Submit"
     }
   };
 
@@ -34,9 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateLanguage = () => {
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      el.innerText = translations[currentLang][key];
+  
+      if (el.tagName === 'INPUT' && el.type === 'submit') {
+        el.value = translations[currentLang][key];
+      } else {
+        el.innerText = translations[currentLang][key];
+      }
     });
-
+  
     placeholderElements.forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       el.setAttribute('placeholder', translations[currentLang][key]);
@@ -53,6 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedOption = toggleSelect.options[toggleSelect.selectedIndex];
     console.log('Ausgewählte Sprache:', selectedOption.value);
   });
-});
+  
+  //Counter für Textfeld input
+  const counterText = () => {
+    const message = document.getElementById('message').value;
+    const counter = document.getElementById('counter');
+    counter.innerText = `${message.length}/1000`;
+  };
 
-document.getElementById('#submit-btn').addEventListener("click", )
+  document.getElementById('message').addEventListener('input', counterText);
+  counterText();
+});
