@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(237, 237, 237);
     height: 60px;
     display: flex;
     align-items: center;
@@ -140,7 +140,7 @@ nav {
 .textarea-wrapper #counter {
     position: absolute;
     bottom: px;
-    left: 10px;
+    left: 8px;
     font-size: 8pt;
     color: #ccc;
     pointer-events: none;

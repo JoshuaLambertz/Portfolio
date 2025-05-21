@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         location: "Standort",
         city: "Düsseldorf, Deutschland",
         submit: "Senden",
+        "message-subject": "Betreff",
       },
       en: {
         projects: "Projects",
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         message: "Write me a message",
         location: "Location",
         city: "Düsseldorf, Germany",
-        submit: "Submit"
+        submit: "Submit",
+        "message-subject": "Subject",
       }
     };
   

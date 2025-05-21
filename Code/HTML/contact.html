@@ -33,11 +33,12 @@
     </nav>
     <main>
         <section class="massage-me">
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email-Address" data-i18n-placeholder="email-address" required>
+            <form action="../PHP/contact.php" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email-Address" data-i18n-placeholder="email-address" required>
+                <input type="text" name="subject" placeholder="Subject" data-i18n-placeholder="message-subject" maxlength="30" required>
                 <div class="textarea-wrapper">
-                    <textarea id="message" placeholder="Write me a message" data-i18n-placeholder="message" minlength="4" maxlength="1000" required></textarea>
+                    <textarea id="message" name="message" placeholder="Write me a message" data-i18n-placeholder="message" minlength="4" maxlength="1000" required></textarea>
                     <p id="counter">0/1000</p>
                 </div>
                 <input type="submit" id="submit-btn" value="Submit" data-i18n="submit">
