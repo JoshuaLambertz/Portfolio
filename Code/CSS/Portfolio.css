@@ -9,6 +9,7 @@ body {
     padding: 0;
 }
 
+/*Navbar*/
 nav {
     background-color: rgb(237, 237, 237);
     height: 60px;
@@ -17,6 +18,7 @@ nav {
     justify-content: space-between;
     padding: 0 20px;
     position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-left,
@@ -85,6 +87,14 @@ nav {
     padding-top: 10px;
 }
 
+/*Projects*/
+.project-container {
+    margin: 50px 50px;
+    padding: 40px;
+    border: 2px solid #ccc;
+}
+
+/*Contact*/
 .massage-me {
     display: flex;
     flex-direction: column;
@@ -153,4 +163,24 @@ nav {
 
 .my-information #my-email {
     margin-bottom: 15px;
+}
+
+.blue-text {
+    color:blue;
+}
+
+/*Footer*/
+.footer {
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 10pt;
+    color: rgb(86, 85, 85);
+    background-color: rgb(237, 237, 237);
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
 }

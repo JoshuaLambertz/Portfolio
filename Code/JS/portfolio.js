@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         projects: "Projekte",
         about: "Über mich",
         contact: "Kontakt",
-        introduction: "Hallo, ich bin Joshua - Full Stack Entwickler mit Sitz in Düsseldorf, Deutschland",
+        introduction: "Hallo, ich bin Joshua Lambertz- Full Stack Entwickler mit Sitz in Wien, Österreich",
         "email-address": "Email Adresse",
         name: "Name",
         message: "Schreib mir eine Nachricht",
         location: "Standort",
-        city: "Düsseldorf, Deutschland",
+        city: "Wien, Österreich",
         submit: "Senden",
         "message-subject": "Betreff",
       },
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         projects: "Projects",
         about: "About",
         contact: "Contact",
-        introduction: "Hello, I'm Joshua - Full stack developer based in Düsseldorf, Germany",
+        introduction: "Hello, I'm <span style='color:rgb(81, 81, 81)'>Joshua Lambertz</span> - Full Stack Developer based in Vienna, Austria",
         "email-address": "Email Address",
         name: "Name",
         message: "Write me a message",
         location: "Location",
-        city: "Düsseldorf, Germany",
+        city: "Vienna, Austria",
         submit: "Submit",
         "message-subject": "Subject",
       }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el.tagName === 'INPUT' && el.type === 'submit') {
           el.value = translations[currentLang][key];
         } else {
-          el.innerText = translations[currentLang][key];
+          el.innerHTML = translations[currentLang][key];
         }
       });
     
