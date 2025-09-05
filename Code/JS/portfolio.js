@@ -74,5 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
   
     document.getElementById('message').addEventListener('input', counterText);
     counterText();
-  
+    
+    //Redirect
+    const params = new URLSearchParams(window.location.search);
+
+    const status = params.get('status');
+
+  if (status) {
+    const statusBox = document.getElementById('status-message');
+    statusBox.hidden = false;
+    const p = statusBox.querySelector("p");
+
+    if (status === 'success') {
+      p.innerText = "Message sent.";
+    } else if (status === 'error') {
+      p.innerText = "Error sending. Try again later or contact me via mail.";
+    }
+  }
   });

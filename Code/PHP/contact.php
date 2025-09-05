@@ -35,12 +35,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Content-Type: text/plain; charset=utf-8";
 
         if (mail($to, $subject, $message, $headers)) {
-            echo "✅ Nachricht erfolgreich gesendet.";
+            header("Location: ../HTML/contact.html?status=success");
+            exit();
         } else {
-            echo "❌ Fehler beim Senden.";
+            header("Location: ../HTML/contact.html?status=error");
+            exit();
         }
     } else {
-        echo "❗Bitte Eingaben überprüfen: <br>$nameErr <br>$emailErr";
+        header("Location: ../HTML/contact.html?status=error");
+        exit();
     }
+} else {
+    header("Location: /portfolio/HTML/contact.html");
+    exit();
 }
 ?>
