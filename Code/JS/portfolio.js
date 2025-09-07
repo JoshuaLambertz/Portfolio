@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projects: "Projekte",
         about: "Über mich",
         contact: "Kontakt",
-        introduction: "Hallo, ich bin Joshua Lambertz- Full Stack Entwickler mit Sitz in Wien, Österreich",
+        introduction: "Hallo, ich bin <span style='color:rgb(81, 81, 81);  font-weight: 600;'>Joshua <br>Lambertz</span> - Full Stack <br>Entwickler mit Sitz <br>in Wien, Österreich",
         "email-address": "Email Adresse",
         name: "Name",
         message: "Schreib mir eine Nachricht",
@@ -18,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         city: "Wien, Österreich",
         submit: "Senden",
         "message-subject": "Betreff",
+        statuserror: "Nachricht konnte nicht gesendet werden"
       },
       en: {
         projects: "Projects",
         about: "About",
         contact: "Contact",
-        introduction: "Hello, I'm <span style='color:rgb(81, 81, 81)'>Joshua Lambertz</span> - Full Stack Developer based in Vienna, Austria",
+        introduction: "Hello, I'm <span style='color:rgb(81, 81, 81);  font-weight: 600;'>Joshua <br>Lambertz</span> - Full Stack <br>Developer based in <br>Vienna, Austria",
         "email-address": "Email Address",
         name: "Name",
         message: "Write me a message",
@@ -91,4 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
       p.innerText = "Error sending. Try again later or contact me via mail.";
     }
   }
-  });
+});
